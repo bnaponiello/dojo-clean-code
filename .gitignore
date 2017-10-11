@@ -1,0 +1,32 @@
+#ignore all target directories
+target/
+
+#ignore "/logs" directory
+logs/
+
+# ignore all files ending with ~
+*~
+
+#metadata
+.metadata
+
+.recommenders
+
+# OS generated files #
+######################
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Eclipse Core
+.project
+.classpath
+.settings
+
+# IntelliJ
+.idea
+*.iml
