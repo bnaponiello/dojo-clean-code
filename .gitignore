@@ -1,5 +1,6 @@
 #ignore all target directories
 target/
+!.mvn/wrapper/maven-wrapper.jar
 
 #ignore "/logs" directory
 logs/
@@ -12,8 +13,7 @@ logs/
 
 .recommenders
 
-# OS generated files #
-######################
+### OS generated files ###
 .DS_Store
 .DS_Store?
 ._*
@@ -22,11 +22,29 @@ logs/
 ehthumbs.db
 Thumbs.db
 
-# Eclipse Core
+### Eclipse Core ###
 .project
 .classpath
 .settings
 
-# IntelliJ
+### IntelliJ IDEA ###
 .idea
+*.iws
 *.iml
+*.ipr
+
+### STS ###
+.apt_generated
+.classpath
+.factorypath
+.project
+.settings
+.springBeans
+
+### NetBeans ###
+nbproject/private/
+build/
+nbbuild/
+dist/
+nbdist/
+.nb-gradle/
