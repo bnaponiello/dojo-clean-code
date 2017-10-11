@@ -20,6 +20,7 @@ Você é dono de uma compahia aérea e está lançando um site de compra de pass
 
 ## Resultado esperado
 
+```
 ---------------------------------------------------------
 Preços e Taxas Detalhados
 ---------------------------------------------------------
@@ -42,4 +43,4 @@ França - Exige visto: Não
 
 ---------------------------------------------------------
 Preço Total: R$ 398,46
-
+```
