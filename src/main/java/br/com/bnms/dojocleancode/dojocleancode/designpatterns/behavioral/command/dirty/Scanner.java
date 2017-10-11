@@ -1,7 +1,6 @@
 package br.com.bnms.dojocleancode.dojocleancode.designpatterns.behavioral.command.dirty;
 
 import br.com.bnms.dojocleancode.dojocleancode.designpatterns.behavioral.command.model.Airport;
-import br.com.bnms.dojocleancode.dojocleancode.designpatterns.behavioral.command.model.Order;
 
 import java.math.BigDecimal;
 import java.text.NumberFormat;
@@ -9,6 +8,8 @@ import java.util.Arrays;
 import java.util.List;
 
 public class Scanner {
+
+    private static final NumberFormat nf = NumberFormat.getCurrencyInstance();
 
     public static void main(String[] args) {
         final Airport brazilAirport = Airport.builder()
@@ -44,24 +45,33 @@ public class Scanner {
         franceAirport.setTotalPrice(calculateTotalPrice(franceAirport));
 
         final List<Airport> airports = Arrays.asList(brazilAirport, americaAirport, portugalAirport, franceAirport);
-        final Order order = new Order(airports);
 
-        final NumberFormat nf = NumberFormat.getCurrencyInstance();
+        printHeader();
 
+        for (final Airport airport : airports) {
+            printBody(airport);
+        }
+
+        printFooter(airports);
+
+    }
+
+    private static void printBody(final Airport airport) {
+        System.out.println(String.format("%s - Taxa de embarque: %s", airport.getCountry(), nf.format(airport.getBoardingFee())));
+        System.out.println(String.format("%s - Taxa de segurança: %s", airport.getCountry(), nf.format(airport.getSecurityTax())));
+        System.out.println(String.format("%s - Exige visto: %s", airport.getCountry(), airport.getRequireVisa() ? "Sim" : "Não"));
+        System.out.print("\n");
+    }
+
+    private static void printFooter(final List<Airport> airports) {
+        System.out.println("---------------------------------------------------------");
+        System.out.println(String.format("Preço Total: %s", nf.format(calculateTotalPrice(airports))));
+    }
+
+    private static void printHeader() {
         System.out.println("---------------------------------------------------------");
         System.out.println("Preços e Taxas Detalhados");
         System.out.println("---------------------------------------------------------");
-
-        for (final Airport airport : order.getAirports()) {
-            System.out.println(String.format("%s - Taxa de embarque: %s", airport.getCountry(), nf.format(airport.getBoardingFee())));
-            System.out.println(String.format("%s - Taxa de segurança: %s", airport.getCountry(), nf.format(airport.getSecurityTax())));
-            System.out.println(String.format("%s - Exige visto: %s", airport.getCountry(), airport.getRequireVisa() ? "Sim" : "Não"));
-            System.out.print("\n");
-        }
-
-        System.out.println("---------------------------------------------------------");
-        System.out.println(String.format("Preço Total: %s", nf.format(calculateTotalPrice(order.getAirports()))));
-
     }
 
     private static BigDecimal calculateTotalPrice(final Airport airport) {
