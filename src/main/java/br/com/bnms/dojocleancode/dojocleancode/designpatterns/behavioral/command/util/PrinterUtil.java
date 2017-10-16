@@ -1,37 +1,26 @@
-package br.com.bnms.dojocleancode.dojocleancode.designpatterns.behavioral.command.clean;
+package br.com.bnms.dojocleancode.dojocleancode.designpatterns.behavioral.command.util;
 
+import br.com.bnms.dojocleancode.dojocleancode.designpatterns.behavioral.command.clean.AirportControl;
 import br.com.bnms.dojocleancode.dojocleancode.designpatterns.behavioral.command.clean.command.AirportCommand;
-import br.com.bnms.dojocleancode.dojocleancode.designpatterns.behavioral.command.clean.command.AmericaAirportCommand;
-import br.com.bnms.dojocleancode.dojocleancode.designpatterns.behavioral.command.clean.command.BrazilAirportCommand;
-import br.com.bnms.dojocleancode.dojocleancode.designpatterns.behavioral.command.clean.command.FranceAirportCommand;
-import br.com.bnms.dojocleancode.dojocleancode.designpatterns.behavioral.command.clean.command.PortugalAirportCommand;
 import br.com.bnms.dojocleancode.dojocleancode.designpatterns.behavioral.command.model.Airport;
 
 import java.math.BigDecimal;
 import java.text.NumberFormat;
+import java.util.ArrayList;
+import java.util.List;
 
-/**
- * Client
- */
-public class Client {
+public class PrinterUtil {
 
     private static final NumberFormat nf = NumberFormat.getCurrencyInstance();
 
-    public static void main(String[] args) {
-        final AirportControl airportControl = new AirportControl();
-
-        airportControl.addAirport(new BrazilAirportCommand());
-        airportControl.addAirport(new AmericaAirportCommand());
-        airportControl.addAirport(new PortugalAirportCommand());
-        airportControl.addAirport(new FranceAirportCommand());
-
+    public static void printSchedule(final List<Airport> airports, final BigDecimal totalAirportsPrice) {
         printHeader();
 
-        for (final AirportCommand airportCommand : airportControl.getAirportCommands()) {
-            printBody(airportCommand.getAirport());
+        for (final Airport airport : airports) {
+            printBody(airport);
         }
 
-        printFooter(airportControl.calculateTotalAirportsPrice());
+        printFooter(totalAirportsPrice);
     }
 
     private static void printHeader() {
@@ -52,5 +41,4 @@ public class Client {
         System.out.println("---------------------------------------------------------");
         System.out.println(String.format("Preço Total: %s", nf.format(total)));
     }
-
 }

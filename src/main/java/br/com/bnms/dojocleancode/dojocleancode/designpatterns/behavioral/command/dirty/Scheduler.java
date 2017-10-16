@@ -3,13 +3,12 @@ package br.com.bnms.dojocleancode.dojocleancode.designpatterns.behavioral.comman
 import br.com.bnms.dojocleancode.dojocleancode.designpatterns.behavioral.command.model.Airport;
 
 import java.math.BigDecimal;
-import java.text.NumberFormat;
 import java.util.Arrays;
 import java.util.List;
 
-public class Scanner {
+import static br.com.bnms.dojocleancode.dojocleancode.designpatterns.behavioral.command.util.PrinterUtil.printSchedule;
 
-    private static final NumberFormat nf = NumberFormat.getCurrencyInstance();
+public class Scheduler {
 
     public static void main(String[] args) {
         final Airport brazilAirport = Airport.builder()
@@ -46,32 +45,7 @@ public class Scanner {
 
         final List<Airport> airports = Arrays.asList(brazilAirport, americaAirport, portugalAirport, franceAirport);
 
-        printHeader();
-
-        for (final Airport airport : airports) {
-            printBody(airport);
-        }
-
-        printFooter(airports);
-
-    }
-
-    private static void printBody(final Airport airport) {
-        System.out.println(String.format("%s - Taxa de embarque: %s", airport.getCountry(), nf.format(airport.getBoardingFee())));
-        System.out.println(String.format("%s - Taxa de segurança: %s", airport.getCountry(), nf.format(airport.getSecurityTax())));
-        System.out.println(String.format("%s - Exige visto: %s", airport.getCountry(), airport.getRequireVisa() ? "Sim" : "Não"));
-        System.out.print("\n");
-    }
-
-    private static void printFooter(final List<Airport> airports) {
-        System.out.println("---------------------------------------------------------");
-        System.out.println(String.format("Preço Total: %s", nf.format(calculateTotalPrice(airports))));
-    }
-
-    private static void printHeader() {
-        System.out.println("---------------------------------------------------------");
-        System.out.println("Preços e Taxas Detalhados");
-        System.out.println("---------------------------------------------------------");
+        printSchedule(airports, calculateTotalPrice(airports));
     }
 
     private static BigDecimal calculateTotalPrice(final Airport airport) {
