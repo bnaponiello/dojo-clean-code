@@ -1,6 +1,6 @@
-package br.com.bnms.dojocleancode.dojocleancode.designpatterns.behavioral.command.clean;
+package br.com.bnms.dojocleancode.dojocleancode.designpatterns.behavioral.command.pattern;
 
-import br.com.bnms.dojocleancode.dojocleancode.designpatterns.behavioral.command.clean.command.AirportCommand;
+import br.com.bnms.dojocleancode.dojocleancode.designpatterns.behavioral.command.pattern.command.AirportCommand;
 import br.com.bnms.dojocleancode.dojocleancode.designpatterns.behavioral.command.model.Airport;
 import lombok.Getter;
 

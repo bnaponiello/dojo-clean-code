@@ -1,12 +1,9 @@
 package br.com.bnms.dojocleancode.dojocleancode.designpatterns.behavioral.command.util;
 
-import br.com.bnms.dojocleancode.dojocleancode.designpatterns.behavioral.command.clean.AirportControl;
-import br.com.bnms.dojocleancode.dojocleancode.designpatterns.behavioral.command.clean.command.AirportCommand;
 import br.com.bnms.dojocleancode.dojocleancode.designpatterns.behavioral.command.model.Airport;
 
 import java.math.BigDecimal;
 import java.text.NumberFormat;
-import java.util.ArrayList;
 import java.util.List;
 
 public class PrinterUtil {

@@ -1,14 +1,12 @@
-package br.com.bnms.dojocleancode.dojocleancode.designpatterns.behavioral.command.clean;
+package br.com.bnms.dojocleancode.dojocleancode.designpatterns.behavioral.command.pattern;
 
-import br.com.bnms.dojocleancode.dojocleancode.designpatterns.behavioral.command.clean.command.AirportCommand;
-import br.com.bnms.dojocleancode.dojocleancode.designpatterns.behavioral.command.clean.command.AmericaAirportCommand;
-import br.com.bnms.dojocleancode.dojocleancode.designpatterns.behavioral.command.clean.command.BrazilAirportCommand;
-import br.com.bnms.dojocleancode.dojocleancode.designpatterns.behavioral.command.clean.command.FranceAirportCommand;
-import br.com.bnms.dojocleancode.dojocleancode.designpatterns.behavioral.command.clean.command.PortugalAirportCommand;
+import br.com.bnms.dojocleancode.dojocleancode.designpatterns.behavioral.command.pattern.command.AirportCommand;
+import br.com.bnms.dojocleancode.dojocleancode.designpatterns.behavioral.command.pattern.command.AmericaAirportCommand;
+import br.com.bnms.dojocleancode.dojocleancode.designpatterns.behavioral.command.pattern.command.BrazilAirportCommand;
+import br.com.bnms.dojocleancode.dojocleancode.designpatterns.behavioral.command.pattern.command.FranceAirportCommand;
+import br.com.bnms.dojocleancode.dojocleancode.designpatterns.behavioral.command.pattern.command.PortugalAirportCommand;
 import br.com.bnms.dojocleancode.dojocleancode.designpatterns.behavioral.command.model.Airport;
 
-import java.math.BigDecimal;
-import java.text.NumberFormat;
 import java.util.ArrayList;
 import java.util.List;
 

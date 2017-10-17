@@ -1,4 +1,4 @@
-package br.com.bnms.dojocleancode.dojocleancode.designpatterns.behavioral.command.dirty;
+package br.com.bnms.dojocleancode.dojocleancode.designpatterns.behavioral.command.nopattern;
 
 import br.com.bnms.dojocleancode.dojocleancode.designpatterns.behavioral.command.model.Airport;
 

@@ -2,7 +2,7 @@
 
 Cada aeroporto no mundo possui suas próprias exigências, taxas, sobretaxas e outros tipos encargos que os passageiros precisam arcar para a utilização do mesmo.
 
-Você é dono de uma compahia aérea e está lançando um site de compra de passagens on-line na internet e precisa calcular, para um determinado cliente, quais são todas as taxas que este deve pagar para fazer uma viagem multidestino entre os países: Brasil, Estados Unidos, Portugal e França. Assim sendo, o seu passageiro deseja:
+Você é dono de uma companhia aérea e está lançando um site de compra de passagens on-line na internet e precisa calcular, para um determinado cliente, quais são todas as taxas que este deve pagar para fazer uma viagem multidestino entre os países: Brasil, Estados Unidos, Portugal e França. Assim sendo, o seu passageiro deseja:
 
 - Embarcar no Brasil e passar uns dias nos Estados Unidos;
 - Embarcar nos EUA e passar uns dias em Portugal;

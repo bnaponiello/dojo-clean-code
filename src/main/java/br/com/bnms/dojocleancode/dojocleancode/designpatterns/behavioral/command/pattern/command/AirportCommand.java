@@ -1,9 +1,7 @@
-package br.com.bnms.dojocleancode.dojocleancode.designpatterns.behavioral.command.clean.command;
+package br.com.bnms.dojocleancode.dojocleancode.designpatterns.behavioral.command.pattern.command;
 
 import br.com.bnms.dojocleancode.dojocleancode.designpatterns.behavioral.command.model.Airport;
 import lombok.Data;
-
-import java.math.BigDecimal;
 
 /**
  * Command
